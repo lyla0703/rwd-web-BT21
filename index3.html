@@ -1,0 +1,334 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BT21</title>
+    <link rel="icon" href="icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <!-- jQuery 版本必須使用完整版，slim 版功能不全-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</head>
+
+<style>
+    body {
+    font-family: Microsoft JhengHei;
+    background-color: lightcoral;
+    }
+    
+    section{
+    margin-top: 20px;
+    margin-bottom: 30px
+    }
+    
+    .carousel-inner img {
+      width: 100%;
+      height: 100%;
+    }
+    
+    .title {
+    color: black;
+    font-weight: bold;
+    margin-bottom: 20px;
+    }
+    
+    h4{
+    color: #fff5a1;
+    font-weight: bold;
+    margin-top: 20px;
+    }
+    
+    h5{
+    color: #fff;
+    font-weight: bold;
+    margin-top: 20px;    
+    }
+
+    .text {
+    font-size: 15px;
+    margin-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: #fff;
+    }
+    
+    .themeintro{
+    font-size: 15px;
+    color: #fff;
+    }
+    
+    #theme{
+    margin-bottom: 40px;
+    }
+    
+    #section2start{
+    margin-top: 20px;
+    }
+    
+    th{
+    color: #fff;    
+    }
+    
+    tbody{
+    color: #fff;     
+    }
+    
+    footer {
+    background-color: #FFF5A1;
+    color: black;
+    height: 50px;
+    text-align: center;
+    font-size: 10px;
+    padding-top: 15px;
+    margin-top: 20px;
+    }
+    @media (max-width: 992px) {
+        .text {
+        margin-top: 0px;
+        }
+        .pic {
+        padding: 15px;
+        }
+    }
+
+</style>
+
+<script>
+	$(document).ready(function(){
+		$("#goHeading1").click(function(){
+            // 保留 65px 給 navbar（視狀況調整）
+			$("html").animate({ scrollTop: $("#heading1").offset().top-65 }, 1000);
+		});
+		$("#goHeading2").click(function(){
+			$("html").animate({ scrollTop: $("#heading2").offset().top-65 }, 1000);			
+		});
+		$("#goHeading3").click(function(){
+			$("html").animate({ scrollTop: $("#heading3").offset().top-65 }, 1000);
+		});
+		$("#goHeading4").click(function(){
+			$("html").animate({ scrollTop: $("#heading4").offset().top-65 }, 1000);
+		});
+		$("#goHeading5").click(function(){
+			$("html").animate({ scrollTop: $("#heading5").offset().top-65 }, 1000);
+		});
+
+		// 點選 Heading 超連結後自動收合 Nav 展開頁
+		$(".nav-link dropdown-toggle").click(function(){
+			$(".navbar-collapse").collapse("hide");
+		});
+        $("#goHeading1").click(function(){
+			$(".navbar-collapse").collapse("hide");
+		});
+        $("#goHeading2").click(function(){
+			$(".navbar-collapse").collapse("hide");
+		});
+        $("#goHeading3").click(function(){
+			$(".navbar-collapse").collapse("hide");
+		});
+        $("#goHeading4").click(function(){
+			$(".navbar-collapse").collapse("hide");
+		});
+        $("#goHeading5").click(function(){
+			$(".navbar-collapse").collapse("hide");
+		});
+	});
+</script>
+
+<body>
+	<a href="#" id="top"></a>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+	    <!-- Logo-->
+        <a class="navbar-brand" href="#">
+            <img src="icon.png" style="width:40px">
+        </a>
+<!--		<a class="navbar-brand" href="#">Smooth Scroll</a>-->
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="#heading1" id="goHeading1">Index<span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#heading2" id="goHeading2">Introduction</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#heading3" id="goHeading3">Charcters</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#heading4" id="goHeading4">News</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#heading5" id="goHeading5">Contact us</a>
+				</li>
+				<li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="＃" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Product</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                        <a class="dropdown-item" href="https://www.linefriends.com.tw/linefriends/index.php?action=product_sort&prod_sort_uid=114">line friends shop</a>
+        
+                    </div>
+                </li>
+			</ul>
+		</div>
+	</nav>
+	<main role="main" class="container">
+		<div class="starter-template">
+			<article>
+				<section id="section1">
+					<a href="#" id="heading1"></a>
+                    <!-- 一個空白 <h1> 保留 navbar 的空間-->
+                    <h3></h3>
+                    <!-- 第一段落-->
+				
+                       <!-- Indicators -->
+                    
+				</section>
+				<section id="section2">
+					<a href="#" id="heading2"></a>
+					<!-- 第二段落-->
+					<div class="row">
+                        <div class="col-md-6 col-sm-12 text">
+                            <h3 class="title"> LINE FRIENDS X BTS = BT21</h3>
+                            <p>FRIENDS CREATORS的第一個企劃，是由防彈少年團與LINE FRIENDS攜手創造所誕生的全新概念卡通角色系列。
+                                這不只是以模仿藝術家或藝人的外表所創造的角色，而是由BTS成員們親自參與角色創造過程的成果。
+                            從最初的卡通角色草圖，到賦予其個性，商品開發計畫等的完整過程，並創造了共8種充滿魅力的個性化角色BT21。</p>
+                            <br>
+                            <p>全球人氣卡通角色品牌LINE FRIENDS的核心關鍵詞：全球化, 千禧世代精神, 時尚潮流感，
+                            防彈少年團則是明確表現LINE FRIENDS核心關鍵詞最具代表性的藝人代表。其强大的影響力不斷地引領著全球新世代的年輕人，
+                            ‘成長不息’的形象更是當今時代最具影響力的故事源泉。</p>
+                        </div>
+                        <div class="col-md-6 col-sm-12 " id="pic">
+                            <img src="bt21.jpg" alt="" width=100% align="bottom">
+                        </div>
+                        
+                        <div class="col-md-6 col-sm-12 text" id="section2start">
+                           
+                        </div>
+                    </div>
+				</section>
+				<section id="section3">
+					<a href="#" id="heading3"></a>
+					<!-- 第三段落-->
+                  <h3 class="title">宇宙明星BT21</h3>
+                    <p>對宇宙另一邊的一切事物抱持好奇心的隊長TATA，在與VAN一起旅行途中，意外登陸地球之後，就立志成為地球上的超級巨星，並與RJ、CHIMMY、COOKY、MANG、SHOOKY和KOYA這些夥伴組成BT21，邁向成為全球超級巨星之旅。這就是 BT21的起點。</p>
+                   <div class="row">
+                   <div class="col-md-3 col-sm-6" id="theme">
+                       <img src="ta1.gif" class="img-thumbnail">
+                       <h4 class="text-center">TATA</h4>
+                       <p class="themeintro">來自BT星球的TATA，好奇心相當旺盛。#BT星球 #超能力 #變身</p>
+                       
+                   </div>
+                   <div class="col-md-3 col-sm-6" id="theme">
+                       <img src="van.gif" class="img-thumbnail">
+                       <h4 class="text-center">VAN</h4>
+                       <p class="themeintro">守護BT21的宇宙機器人。#守護者 #運載器 #萬能機器人</p>
+                       
+                   </div>
+                   <div class="col-md-3 col-sm-6" id="theme">
+                       <img src="rj.gif" class="img-thumbnail">
+                       <h4 class="text-center">RJ</h4>
+                       <p class="themeintro">親切有禮的RJ，在品嚐美食的模樣最可愛。因為超怕冷，一年四季都穿著大衣。#問候 #溫順 #大衣 #哆哆嗦嗦</p>
+          
+                   </div>
+                   <div class="col-md-3 col-sm-6" id="theme">
+                       <img src="chimmy.gif" class="img-thumbnail">
+                       <h4 class="text-center">CHIMMY</h4>
+                       <p class="themeintro">擁有與生俱來的熱情以及對任何事情都懷抱著無限期望。#認真 #努力 #黄色帽T</p>
+                       </div>
+                       <div class="col-md-3 col-sm-6" id="theme">
+                       <img src="cooky.gif" class="img-thumbnail">
+                       <h4 class="text-center">COOKY</h4>
+                       <p class="themeintro">渴望變強壯的粉紅色兔子。#眉毛 #不對稱 #幻想肌肉</p>
+                       </div>
+                       <div class="col-md-3 col-sm-6" id="theme">
+                       <img src="shooky.gif" class="img-thumbnail">
+                       <h4 class="text-center">SHOOKY</h4>
+                       <p class="themeintro">擁有超能力的魔法餅乾。最害怕牛奶。#表情豐富 #小不點 #再生能力 #朋友們</p>
+                       </div>
+                       <div class="col-md-3 col-sm-6" id="theme">
+                       <img src="mang.gif" class="img-thumbnail">
+                       <h4 class="text-center">MANG</h4>
+                       <p class="themeintro">跳舞時最帥氣的MANG。總是戴著面具生活。#愛心鼻 #面具 #嘮叨</p>
+                       </div>
+                       <div class="col-md-3 col-sm-6" id="theme">
+                       <img src="koya.gif" class="img-thumbnail">
+                       <h4 class="text-center">KOYA</h4>
+                       <p class="themeintro">相當聰明的KOYA！看起來總是在睡覺的他其實正陷入沈思。#整理王 #枕頭 #睡眼朦朧 #可拆卸的耳朵</p>
+            
+                   </div>
+                   </div>
+				</section>
+				<section id="section4">
+					<a href="#" id="heading4"></a>
+					<!-- 第四段落-->
+					<h3 class="title">News</h3>
+    
+                    <div id="demo" class="carousel slide" data-ride="carousel" >
+                       <!-- Indicators -->
+        
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img src="bg_gallery_03.jpg" alt="">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="bg_gallery_04.jpg" alt="">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="bg_gallery_05.jpg" alt="">
+                        </div>
+                    </div>
+
+                   <div>
+                    <!-- Left and right controls -->
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    
+                    </a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                    
+                    </a>
+                    </div>
+            <div class="themeintro">
+                       <br>
+                       <br>
+                        <p>人氣超高的BT21角色TATA、VAN、RJ、CHIMMY、COOKY、MANG、SHOOKY以及KOYA全員出動幫經典的黑、白色「Chuck Taylor系列」帆布鞋畫上各種彩繪圖案，也順便把自己印上鞋面啦！（是自畫像的概念XD）為最初以籃球鞋起步、名人也愛不釋手的ALL STAR注入BT21自由奔放的魅力，還附上能夠隨意DIY的BT21角色勳章、超潮鞋帶，人人都可以打造出專屬自己的獨特帆布鞋了！</p> 
+                          
+                    </div>
+                    <br>
+                    <br>
+                    
+				<section id="section5">
+					<a href="#" id="heading5"></a>
+					<!-- 第五段落-->
+					<h3 class="title">Contact us</h3>
+                    <div>
+                        <img src="store_file_6.jpg" alt="" width=90% align="bottom"> 
+                        <h4>LINE FRIENDS 台北車站店</h4>
+                        <p> 週一～週日 10:00am～10:00pm</p>
+                        <p>100 台北市中正區微風台北車站1F大廳(近北2門)</p>
+                        <iframe width='100%' height='200' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src='https://maps.google.com.tw/maps?f=q&hl=zh-TW&geocode=&q=台北市中正區微風台北車站1F大廳(&z=16&output=embed&t='></iframe>
+                    </div>
+                <br>
+                <br>
+                 <div>
+                        <img src="store_file_4.jpg" alt="" width=90% align="bottom"> 
+                        <h4>LINE FRIENDS 新光三越A11</h4>
+                        <p> 11:00~21:30 例假日前一天 11:00~22:00</p>
+                        <p>110 台北市信義區松壽路11號新光三越A111F</p>
+                        <iframe width='100%' height='200' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src='https://maps.google.com.tw/maps?f=q&hl=zh-TW&geocode=&q=台北市信義區松壽路11號新光三越A111F(&z=16&output=embed&t='></iframe>
+				</section>
+			   
+			   </article>
+			
+		   </div>
+	</main>
+	<footer>
+        © 2019 BT21. All Rights Reserved.
+    </footer>
+</body>
+
+</html>
